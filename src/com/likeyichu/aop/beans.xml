@@ -17,6 +17,7 @@
 		<aop:before pointcut-ref="performance" method="takeSeats"/>
 		<aop:after-returning pointcut-ref="performance" method="applause"/>
 		<aop:after-throwing pointcut-ref="performance" method="boo"/>
+		<aop:around  pointcut-ref="performance" method="watch"/>
 	</aop:aspect>
 </aop:config>
 </beans>

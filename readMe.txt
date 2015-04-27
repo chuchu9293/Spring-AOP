@@ -1,0 +1,2 @@
+演示AOP的使用。
+maven引入了aspectJ依赖，它来实现beans.xml中的aop配置。
