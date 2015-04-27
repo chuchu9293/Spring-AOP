@@ -15,11 +15,12 @@ public class Audience {
 	public void boo(){
 		System.out.println("boo boo ");
 	}
-	//around通知
+	//around通知。
+	//调用次序为before通知，around通知、after通知
 	public void watch(ProceedingJoinPoint joinPoint) throws Throwable{
 		long start=System.currentTimeMillis();
 		System.out.println("the performance is coming soon");
-		joinPoint.proceed();
+		joinPoint.proceed();//调用切点方法
 		TimeUnit.SECONDS.sleep(3);//模拟表演用时
 		long end=System.currentTimeMillis();
 		System.out.println("the performance last "+(end-start)+"seconds");
